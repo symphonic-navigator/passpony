@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import argparse
-import random
+import secrets
 import math
 import sys
 import os
@@ -16,7 +16,7 @@ def load_wordlist(path):
     return words
 
 def generate_passphrase(words, count, separator):
-    return separator.join(random.choice(words) for _ in range(count))
+    return separator.join(secrets.choice(words) for _ in range(count))
 
 def calculate_entropy(wordlist_size, num_words):
     return round(num_words * math.log2(wordlist_size), 2)
