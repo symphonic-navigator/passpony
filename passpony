@@ -8,7 +8,7 @@ import os
 
 version = "1.0.0"
 
-default_wordlist = "clean_wordlist.txt"
+default_wordlist = "/usr/share/passpony/clean_wordlist.txt"
 
 def load_wordlist(path):
     with open(path, 'r') as f:
